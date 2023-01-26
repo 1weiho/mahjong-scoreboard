@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import InitPlayer from "./InitPlayer"
 import { Player } from "./Player"
 import { GameData } from "./GameData"
+import PlayerInfo from "./PlayerInfo"
 
 function App() {
   const [gameData, setGameData] = useState<GameData>()
@@ -30,7 +31,7 @@ function App() {
 
   return (
     <div className="h-screen w-screen bg-slate-100 flex justify-center items-center">
-      {players.length == 0 && <InitPlayer setPlayers={setPlayers} />}
+      {players.length == 0 ? <InitPlayer setPlayers={setPlayers} /> : <PlayerInfo players={players} />}
     </div>
   )
 }
