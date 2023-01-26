@@ -2,7 +2,7 @@
   "name": "mahjong-scoreboard",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://davidho0403.github.io/mahjong-scoreboard",
+  "homepage": "https://davidho0403.github.io/mahjong-scoreboard/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
