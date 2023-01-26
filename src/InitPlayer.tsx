@@ -1,15 +1,15 @@
 import { useState } from "react"
-import { Player } from "./Player"
+import { Player, WIND_TYPE } from "./Player"
 
 interface Props {
   setPlayers: (newPlayer: Player[]) => void
 }
 
 function InitPlayer({ setPlayers }: Props) {
-  const [player1, setPlayer1] = useState<Player>({ name: "", wind: "East", score: 0 })
-  const [player2, setPlayer2] = useState<Player>({ name: "", wind: "West", score: 0 })
-  const [player3, setPlayer3] = useState<Player>({ name: "", wind: "South", score: 0 })
-  const [player4, setPlayer4] = useState<Player>({ name: "", wind: "North", score: 0 })
+  const [player1, setPlayer1] = useState<Player>({ name: "", wind: WIND_TYPE[0], score: 0 })
+  const [player2, setPlayer2] = useState<Player>({ name: "", wind: WIND_TYPE[1], score: 0 })
+  const [player3, setPlayer3] = useState<Player>({ name: "", wind: WIND_TYPE[2], score: 0 })
+  const [player4, setPlayer4] = useState<Player>({ name: "", wind: WIND_TYPE[3], score: 0 })
 
   return (
     <form

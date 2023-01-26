@@ -18,8 +18,8 @@ function PlayerInfo({ players }: Props) {
         </thead>
         <tbody>
           {players.map((d) => (
-            <tr key={d.wind}>
-              <td>{d.wind}</td>
+            <tr key={d.wind.id}>
+              <td>{d.wind.name}</td>
               <td>{d.name}</td>
               <td>{d.score}</td>
             </tr>
