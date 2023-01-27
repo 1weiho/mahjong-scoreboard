@@ -1,4 +1,4 @@
-![banner](https://user-images.githubusercontent.com/75478661/215145025-23b2e356-42c1-4f27-ba22-5203515286f8.png)
+![banner](https://user-images.githubusercontent.com/75478661/215185929-02cecafa-a95d-4427-ab55-d73018d3d964.png)
 
 # Mahjong Scoreboard
 
