@@ -1,8 +1,9 @@
 import { useState } from "react"
 import PlayerNameInput from "../components/PlayerNameInput"
-import * as TypeDef from "../TypeDef"
 import { v4 as uuidv4 } from "uuid"
 import { useNavigate } from "react-router-dom"
+import { Game } from "../interfaces/Game"
+import { WIND_TYPE } from "../interfaces/WindType"
 
 const CreateGame = () => {
   const [player1, setPlayer1] = useState<string>("")
@@ -12,19 +13,19 @@ const CreateGame = () => {
   const navigate = useNavigate()
 
   const handleSave = () => {
-    let gameDataLocal: TypeDef.Game[] = []
+    let gameDataLocal: Game[] = []
     if ("gameData" in localStorage) {
       gameDataLocal = JSON.parse(localStorage.getItem("gameData") as string)
     }
 
-    const newGame: TypeDef.Game = {
+    const newGame: Game = {
       UUID: uuidv4(),
       timestamp: Date.now(),
       players: [
-        { wind: TypeDef.WIND_TYPE[0], name: player1 },
-        { wind: TypeDef.WIND_TYPE[1], name: player2 },
-        { wind: TypeDef.WIND_TYPE[2], name: player3 },
-        { wind: TypeDef.WIND_TYPE[3], name: player4 },
+        { wind: WIND_TYPE[0], name: player1 },
+        { wind: WIND_TYPE[1], name: player2 },
+        { wind: WIND_TYPE[2], name: player3 },
+        { wind: WIND_TYPE[3], name: player4 },
       ],
       round: null,
     }
