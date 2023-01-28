@@ -22,10 +22,10 @@ const CreateGame = () => {
       UUID: uuidv4(),
       timestamp: Date.now(),
       players: [
-        { wind: WIND_TYPE[0], name: player1 },
-        { wind: WIND_TYPE[1], name: player2 },
-        { wind: WIND_TYPE[2], name: player3 },
-        { wind: WIND_TYPE[3], name: player4 },
+        { wind: WIND_TYPE[0], name: player1, score: 0 },
+        { wind: WIND_TYPE[1], name: player2, score: 0 },
+        { wind: WIND_TYPE[2], name: player3, score: 0 },
+        { wind: WIND_TYPE[3], name: player4, score: 0 },
       ],
       round: null,
     }
