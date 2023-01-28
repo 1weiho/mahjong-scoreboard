@@ -1,4 +1,4 @@
-interface WindType {
+export interface WindType {
   id: string
   name: string
 }

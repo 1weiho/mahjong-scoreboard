@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom"
 import CreateGame from "./pages/CreateGame"
+import Gaming from "./pages/Gaming"
 import GameHistory from "./pages/GameHistory"
 import Homepage from "./pages/Homepage"
 
@@ -10,6 +11,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/create-game" element={<CreateGame />} />
         <Route path="/game-history" element={<GameHistory />} />
+        <Route path="/game/:gameId" element={<Gaming />} />
       </Routes>
     </div>
   )
