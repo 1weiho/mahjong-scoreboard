@@ -11,6 +11,7 @@ const PlayerNameInput = ({ wind, setPlayer }: Props) => {
         className="text-slate-700 bg-transparent outline-none"
         placeholder="請輸入玩家名稱"
         onChange={(e) => setPlayer(e.target.value)}
+        required
       />
     </div>
   )
