@@ -7,11 +7,17 @@ const Homepage = () => {
         歡迎使用 <span className="text-sky-600">麻將計分板</span>
       </h1>
       <div className="flex space-x-6">
-        <Link to="create-game" className="border border-slate-400 rounded-md px-5 py-3 w-64 flex flex-col text-start">
+        <Link
+          to="create-game"
+          className="border border-slate-400 rounded-md px-5 py-3 w-64 flex flex-col text-start hover:bg-slate-50 duration-200"
+        >
           <span className="text-2xl font-semibold mb-2">創建遊戲</span>
           <span className="text-slate-700">創建一個新的遊戲，並設定玩家名稱</span>
         </Link>
-        <Link to="game-history" className="border border-slate-400 rounded-md px-5 py-3 w-64 flex flex-col text-start">
+        <Link
+          to="game-history"
+          className="border border-slate-400 rounded-md px-5 py-3 w-64 flex flex-col text-start hover:bg-slate-50 duration-200"
+        >
           <span className="text-2xl font-semibold mb-2">歷史紀錄</span>
           <span className="text-slate-700">檢視所有歷史紀錄，可查看詳細遊戲結果</span>
         </Link>
