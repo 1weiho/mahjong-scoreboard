@@ -26,6 +26,7 @@ const Gaming = () => {
               wind={gameData?.players[2].wind}
               name={gameData?.players[2].name}
               score={gameData?.players[2].score}
+              dealerWind={currentRoundInfo?.round}
             />
           </div>
           <div className="row-span-1 flex justify-between items-center">
@@ -33,11 +34,13 @@ const Gaming = () => {
               wind={gameData?.players[3].wind}
               name={gameData?.players[3].name}
               score={gameData?.players[3].score}
+              dealerWind={currentRoundInfo?.round}
             />
             <PlayerCard
               wind={gameData?.players[1].wind}
               name={gameData?.players[1].name}
               score={gameData?.players[1].score}
+              dealerWind={currentRoundInfo?.round}
             />
           </div>
           <div className="row-span-1 flex justify-center items-end">
@@ -45,6 +48,7 @@ const Gaming = () => {
               wind={gameData?.players[0].wind}
               name={gameData?.players[0].name}
               score={gameData?.players[0].score}
+              dealerWind={currentRoundInfo?.round}
             />
           </div>
         </div>
