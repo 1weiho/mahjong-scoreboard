@@ -32,9 +32,9 @@ const Gaming = () => {
 
   return (
     <div className="h-full w-full p-12">
-        <div className="grid grid-rows-3 h-full w-full auto-rows-auto">
-          <div className="row-span-1 flex justify-center items-start">
       {gameData?.players && currentRoundInfo && (
+        <div className="flex flex-col justify-around h-full">
+          <div className="flex w-full justify-center items-center">
             <PlayerCard
               wind={gameData?.players[2].wind}
               name={gameData?.players[2].name}
@@ -42,14 +42,16 @@ const Gaming = () => {
               dealerWind={currentRoundInfo?.round}
             />
           </div>
-          <div className="row-span-1 flex justify-between items-center">
+          <div className="flex w-full justify-around items-center h-full">
             <PlayerCard
               wind={gameData?.players[3].wind}
               name={gameData?.players[3].name}
               score={gameData?.players[3].score}
               dealerWind={currentRoundInfo?.round}
             />
+            <div className="w-full h-full flex justify-center items-center">
               <GamePanel windName={currentRoundInfo?.wind.name} roundName={currentRoundInfo?.round.name} />
+            </div>
             <PlayerCard
               wind={gameData?.players[1].wind}
               name={gameData?.players[1].name}
@@ -57,7 +59,7 @@ const Gaming = () => {
               dealerWind={currentRoundInfo?.round}
             />
           </div>
-          <div className="row-span-1 flex justify-center items-end">
+          <div className="flex w-full justify-center items-center">
             <PlayerCard
               wind={gameData?.players[0].wind}
               name={gameData?.players[0].name}
