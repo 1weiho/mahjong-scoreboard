@@ -27,7 +27,7 @@ const CreateGame = () => {
         { wind: WIND_TYPE[2], name: player3, score: 0 },
         { wind: WIND_TYPE[3], name: player4, score: 0 },
       ],
-      round: null,
+      round: [{ wind: WIND_TYPE[0], round: WIND_TYPE[0], dealerNum: 0, result: [], time: 0 }],
     }
 
     gameDataLocal.push(newGame)
