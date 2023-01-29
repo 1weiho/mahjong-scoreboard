@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import GamePanel from "../components/GamePanel"
 import PlayerCard from "../components/PlayerCard"
 import { Game } from "../interfaces/Game"
+import { Round } from "../interfaces/Round"
 
 const Gaming = () => {
   const [gameData, setGameData] = useState<Game>()
+  const [currentRoundInfo, setCurrentRoundInfo] = useState<Round>()
   const { gameId } = useParams<string>()
 
   const fetchGameData = () => {
@@ -17,11 +20,21 @@ const Gaming = () => {
     fetchGameData()
   }, [])
 
+  const handleRoundEnd = () => {}
+
+  // This effect is used to save the current round information when the gameData state changed
+  useEffect(() => {
+    if (gameData?.round != null) {
+      const roundCount = gameData.round.length
+      setCurrentRoundInfo(gameData.round[roundCount - 1])
+    }
+  }, [gameData])
+
   return (
     <div className="h-full w-full p-12">
-      {gameData?.players && (
         <div className="grid grid-rows-3 h-full w-full auto-rows-auto">
           <div className="row-span-1 flex justify-center items-start">
+      {gameData?.players && currentRoundInfo && (
             <PlayerCard
               wind={gameData?.players[2].wind}
               name={gameData?.players[2].name}
@@ -36,6 +49,7 @@ const Gaming = () => {
               score={gameData?.players[3].score}
               dealerWind={currentRoundInfo?.round}
             />
+              <GamePanel windName={currentRoundInfo?.wind.name} roundName={currentRoundInfo?.round.name} />
             <PlayerCard
               wind={gameData?.players[1].wind}
               name={gameData?.players[1].name}
