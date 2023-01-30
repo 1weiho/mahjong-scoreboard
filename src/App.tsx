@@ -6,7 +6,7 @@ import Homepage from "./pages/Homepage"
 
 function App() {
   return (
-    <div className="h-screen w-screen bg-slate-100 flex flex-col items-center text-slate-900">
+    <div className="h-screen w-screen bg-slate-50 flex flex-col items-center text-slate-900">
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/create-game" element={<CreateGame />} />
