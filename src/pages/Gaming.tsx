@@ -20,8 +20,6 @@ const Gaming = () => {
     fetchGameData()
   }, [])
 
-  const handleRoundEnd = () => {}
-
   // This effect is used to save the current round information when the gameData state changed
   useEffect(() => {
     if (gameData?.round != null) {
@@ -50,7 +48,11 @@ const Gaming = () => {
               dealerWind={currentRoundInfo?.round}
             />
             <div className="w-full h-full flex justify-center items-center">
-              <GamePanel windName={currentRoundInfo?.wind.name} roundName={currentRoundInfo?.round.name} />
+              <GamePanel
+                windName={currentRoundInfo?.wind.name}
+                roundName={currentRoundInfo?.round.name}
+                player={gameData.players}
+              />
             </div>
             <PlayerCard
               wind={gameData?.players[1].wind}
