@@ -46,7 +46,7 @@ const CreateGame = () => {
           <PlayerNameInput wind="北" setPlayer={setPlayer4} />
         </div>
         <button
-          className="bg-blue-500 text-white drop-shadow-md hover:drop-shadow-lg rounded-lg px-3 py-2 w-24 duration-200 tracking-widest"
+          className="bg-blue-500 text-white shadow-md hover:shadow-lg rounded-lg px-3 py-2 w-24 duration-200 tracking-widest"
           type="submit"
         >
           儲存

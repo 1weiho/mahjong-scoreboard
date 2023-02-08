@@ -19,13 +19,13 @@ const Transaction = ({ resultType, player, roundName, winnerPlayer, loserPlayer 
         <div className="space-x-3">
           <input
             type="text"
-            className="bg-white drop-shadow-md rounded-md h-12 w-12 text-center text-2xl font-semibold outline-none"
+            className="bg-white shadow-md rounded-md h-12 w-12 text-center text-2xl font-semibold outline-none"
           />
           <span className="text-lg">台</span>
         </div>
       </div>
       <button
-        className="bg-blue-500 text-white drop-shadow-md hover:drop-shadow-lg rounded-lg px-3 py-2 w-24 duration-200 tracking-widest"
+        className="bg-blue-500 text-white shadow-md hover:shadow-lg rounded-lg px-3 py-2 w-24 duration-200 tracking-widest"
         onClick={handleCalculateTransaction}
       >
         繼續

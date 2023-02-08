@@ -18,14 +18,14 @@ const GamePanel = ({ windName, roundName, player }: Props) => {
   const [loserPlayer, setLoserPlayer] = useState<Player[]>([])
 
   return (
-    <div className="bg-white drop-shadow-md duration-200 rounded-md px-5 py-6 flex flex-col items-center justify-center text-center w-1/2 h-1/2">
+    <div className="bg-white shadow-md duration-200 rounded-md px-5 py-6 flex flex-col items-center justify-center text-center w-1/2 h-1/2">
       <span className="text-2xl font-semibold mb-4">
         {windName}風{roundName}局
       </span>
       {gameState === "waiting" && (
         <div className="flex justify-center space-x-6">
           <button
-            className="bg-blue-500 text-white drop-shadow-md hover:drop-shadow-lg rounded-lg px-3 py-2 w-24 duration-200 tracking-widest"
+            className="bg-blue-500 text-white shadow-md hover:shadow-lg rounded-lg px-3 py-2 w-24 duration-200 tracking-widest"
             onClick={() => {
               setGameState("inResultSelecting")
               setResultType("chuck")
@@ -34,7 +34,7 @@ const GamePanel = ({ windName, roundName, player }: Props) => {
             放槍
           </button>
           <button
-            className="bg-blue-500 text-white drop-shadow-md hover:drop-shadow-lg rounded-lg px-3 py-2 w-24 duration-200 tracking-widest"
+            className="bg-blue-500 text-white shadow-md hover:shadow-lg rounded-lg px-3 py-2 w-24 duration-200 tracking-widest"
             onClick={() => {
               setGameState("inResultSelecting")
               setResultType("self")
@@ -43,7 +43,7 @@ const GamePanel = ({ windName, roundName, player }: Props) => {
             自摸
           </button>
           <button
-            className="bg-blue-500 text-white drop-shadow-md hover:drop-shadow-lg rounded-lg px-3 py-2 w-24 duration-200 tracking-widest"
+            className="bg-blue-500 text-white shadow-md hover:shadow-lg rounded-lg px-3 py-2 w-24 duration-200 tracking-widest"
             onClick={() => {
               setGameState("inResultSelecting")
               setResultType("draw")

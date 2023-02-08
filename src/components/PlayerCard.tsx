@@ -9,7 +9,7 @@ interface Props {
 
 function PlayerCard({ wind, name, score, dealerWind }: Props) {
   return (
-    <div className="bg-white drop-shadow-md hover:drop-shadow-lg duration-200 rounded-md px-5 py-3 w-64 h-fit flex items-center justify-between">
+    <div className="bg-white shadow-md hover:shadow-lg duration-200 rounded-md px-5 py-3 w-64 h-fit flex items-center justify-between">
       <div className="flex flex-col">
         <span>{wind.name}</span>
         <div className="flex items-center space-x-2 mb-2">

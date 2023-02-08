@@ -50,7 +50,7 @@ const ChuckSelect = ({ player, setWinnerPlayer, setLoserPlayer, setGameState }: 
           <div className="flex justify-center space-x-4">
             {player.map((d) => (
               <button
-                className="bg-blue-500 text-white drop-shadow-md hover:drop-shadow-lg rounded-lg px-3 py-2 w-24 duration-200 tracking-widest"
+                className="bg-blue-500 text-white shadow-md hover:shadow-lg rounded-lg px-3 py-2 w-24 duration-200 tracking-widest"
                 key={d.wind.id}
                 onClick={() => handleSelectChuck(d)}
               >
@@ -71,7 +71,7 @@ const ChuckSelect = ({ player, setWinnerPlayer, setLoserPlayer, setGameState }: 
             {player.map((d) =>
               d.wind.id === chucker?.wind.id ? (
                 <button
-                  className="bg-slate-500 text-white drop-shadow-md hover:drop-shadow-lg rounded-lg px-3 py-2 w-24 duration-200 tracking-widest"
+                  className="bg-slate-500 text-white shadow-md hover:shadow-lg rounded-lg px-3 py-2 w-24 duration-200 tracking-widest"
                   key={d.wind.id}
                   disabled
                 >
@@ -79,7 +79,7 @@ const ChuckSelect = ({ player, setWinnerPlayer, setLoserPlayer, setGameState }: 
                 </button>
               ) : (
                 <button
-                  className="bg-blue-500 text-white drop-shadow-md hover:drop-shadow-lg rounded-lg px-3 py-2 w-24 duration-200 tracking-widest"
+                  className="bg-blue-500 text-white shadow-md hover:shadow-lg rounded-lg px-3 py-2 w-24 duration-200 tracking-widest"
                   key={d.wind.id}
                   onClick={() => handleSelectWinner(d)}
                 >
